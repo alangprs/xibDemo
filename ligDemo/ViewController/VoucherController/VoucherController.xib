@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VoucherController" customModule="ligDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="UBO-gy-wDf" id="YZ3-Sq-n91"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="HNR-FG-q3J">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jn8-P5-S22">
+                    <rect key="frame" x="0.0" y="44" width="414" height="89"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0t-C6-Dme" customClass="HistorListButton" customModule="ligDemo" customModuleProvider="target">
+                            <rect key="frame" x="333" y="29" width="62" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="歷史紀錄"/>
+                            <connections>
+                                <action selector="changToHistorList:" destination="-1" eventType="touchUpInside" id="k2P-Lp-ZrP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="89" id="4G6-Qa-xVP"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UBO-gy-wDf">
+                    <rect key="frame" x="0.0" y="133" width="414" height="729"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="UBO-gy-wDf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="55r-c6-vu6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HNR-FG-q3J" secondAttribute="bottom" id="7Ec-bc-Me5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jn8-P5-S22" secondAttribute="trailing" id="Aip-AA-dpy"/>
+                <constraint firstItem="HNR-FG-q3J" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HUX-bv-Ns7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HNR-FG-q3J" secondAttribute="trailing" id="NzO-6N-7G7"/>
+                <constraint firstItem="UBO-gy-wDf" firstAttribute="top" secondItem="Jn8-P5-S22" secondAttribute="bottom" id="PDj-PF-wKb"/>
+                <constraint firstItem="HNR-FG-q3J" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WCk-UZ-dgX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UBO-gy-wDf" secondAttribute="trailing" id="boh-yH-xMo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="UBO-gy-wDf" secondAttribute="bottom" id="dEE-xL-M7a"/>
+                <constraint firstItem="Jn8-P5-S22" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dqt-Pt-jgV"/>
+                <constraint firstItem="Jn8-P5-S22" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rCS-PQ-KrI"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="104"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

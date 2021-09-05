@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func pushToVoucher(_ sender: UIButton) {
+        let controller = VoucherController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
 }
 
